@@ -7,7 +7,7 @@ The number of threads is determined by the number of CPU cores.
 
 >go build
 
->./goudpserver 127.0.0.1 10003
+>./goudpserver -ip=0.0.0.0 -port=10003
 
 ## Testing
 
