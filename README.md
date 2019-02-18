@@ -1,5 +1,9 @@
 # Simple multithreaded GoLang UDP server
 
+[![Languages](https://img.shields.io/github/languages/top/SDMMSK/GoUDPServer.svg?style=flat-square)](README.md)
+[![Code Size](https://img.shields.io/github/languages/code-size/SDMMSK/GoUDPServer.svg?style=flat-square)](README.md)
+[![License](https://img.shields.io/github/license/SDMMSK/GoUDPServer.svg?style=flat-square)](LICENSE)  
+
 Simple multithreaded GoLang UDP server.  
 The number of threads is determined by the number of CPU cores.
 
@@ -15,5 +19,5 @@ The number of threads is determined by the number of CPU cores.
 
 ## License
 
-![GPLv3](https://www.gnu.org/graphics/gplv3-127x51.png)  
+[![GPLv3](https://www.gnu.org/graphics/gplv3-127x51.png)](LICENSE)  
 This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
