@@ -1,6 +1,6 @@
-// go build -ldflags "-s -w"
-// goudpserver -ip=0.0.0.0 -port=10003
-// ncat -u localhost 10003
+// Build: go build -ldflags "-s -w"
+// Run: goudpserver -ip=0.0.0.0 -port=10003
+// Test: ncat -u localhost 10003
 
 package main
 
@@ -33,8 +33,7 @@ func main() {
 
 	addr := net.UDPAddr{
 		Port: *argPort,
-		// IP:   net.IP{0, 0, 0, 0},
-		IP: net.ParseIP(*argIP),
+		IP:   net.ParseIP(*argIP),
 	}
 	connection, err := net.ListenUDP("udp", &addr)
 	if err != nil {
