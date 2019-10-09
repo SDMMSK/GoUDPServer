@@ -3,7 +3,7 @@
 [![Languages](https://img.shields.io/github/languages/top/SDMMSK/GoUDPServer.svg?style=flat-square)](README.md)
 [![Code Size](https://img.shields.io/github/languages/code-size/SDMMSK/GoUDPServer.svg?style=flat-square)](README.md)
 [![License](https://img.shields.io/github/license/SDMMSK/GoUDPServer.svg?style=flat-square)](LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/SDMMSK/GoUDPServer)](https://goreportcard.com/report/github.com/SDMMSK/GoUDPServer)  
+[![Go Report Card](https://goreportcard.com/badge/github.com/SDMMSK/GoUDPServer?style=flat-square)](https://goreportcard.com/report/github.com/SDMMSK/GoUDPServer)  
 
 Simple multithreaded GoLang UDP server.  
 The number of threads is determined by the number of CPU cores.
