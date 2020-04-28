@@ -30,12 +30,18 @@ func lstn(connection *net.UDPConn, alarm chan struct{}) {
 }
 
 func main() {
+	envFlag := runtime.GOMAXPROCS(runtime.NumCPU())
+	if envFlag > -1 {
+		fmt.Println("GOMAXPROCS =", runtime.NumCPU())
+	} else {
+		fmt.Println("GOMAXPROCS is default!")
+	}
 	argIP := flag.String("ip", "0.0.0.0", "Listen IP address")
 	argPort := flag.Int("port", 10003, "Listen Port number")
 	flag.Parse()
 
-	fmt.Println("IP Address: ", *argIP)
-	fmt.Println("Port Number: ", *argPort)
+	fmt.Println("IP Address:", *argIP)
+	fmt.Println("Port Number:", *argPort)
 
 	addr := net.UDPAddr{
 		Port: *argPort,
@@ -46,7 +52,7 @@ func main() {
 		panic(err)
 	}
 	alarm := make(chan struct{})
-	fmt.Println("CPU Threads: ", runtime.NumCPU())
+	fmt.Println("CPU Threads:", runtime.NumCPU())
 	for i := 0; i < runtime.NumCPU(); i++ {
 		go lstn(connection, alarm)
 	}
