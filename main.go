@@ -17,8 +17,12 @@ func lstn(connection *net.UDPConn, alarm chan struct{}) {
 	n, remoteAddr, err := 0, new(net.UDPAddr), error(nil)
 	for err == nil {
 		n, remoteAddr, err = connection.ReadFromUDP(buffer)
-		fmt.Println("from", remoteAddr, "-", string(buffer[:n]))
-		n, err = connection.WriteToUDP([]byte("OK"), remoteAddr)
+		if err != nil {
+			fmt.Println("ReadUDP Error (", err.Error(), ")")
+		} else {
+			fmt.Println("From", remoteAddr, "-", string(buffer[:n]))
+		}
+		_, err = connection.WriteToUDP([]byte("OK\n"), remoteAddr)
 		if err != nil {
 			fmt.Println("WriteUDP Error (", err.Error(), ")")
 		} else {
