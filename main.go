@@ -1,3 +1,4 @@
+// Version: 2021.10
 // Build: go build -ldflags "-s -w"
 // Run: goudpserver -ip=0.0.0.0 -port=10003
 // Test: ncat -u localhost 10003
